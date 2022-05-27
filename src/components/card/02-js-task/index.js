@@ -6,38 +6,21 @@ export default class Card {
   }
   getTemplate() {
     return `
-    <div class="os-product-card">
-        <div
-          class="os-product-img"
-          style="
-            background-image: url(${this.componentProduct.images[0]})
-          "
-        ></div>
-
-        <div class="os-product-content">
-          <div class="os-product-price-wrapper">
-            <div class="os-product-rating">
-              <span>${this.componentProduct.rating}</span>
-              <i class="bi bi-star">&nbsp;</i>
-            </div>
-
-            <div class="os-product-price">
-            ${this.componentProduct.price}
-            </div>
-          </div>
-
-          <h5 class="os-product-title">
-            ${this.componentProduct.title}
-          </h5>
-          <p class="os-product-description">${this.componentProduct.category}</p>
-        </div>
-
-        <footer class="os-product-footer">
-          <button class="os-btn-primary" data-element="addToCartBtn">
-            Add To Cart
-          </button>
-        </footer>
+    <div class="card">
+    <img class="card-image" src=${this.componentProduct.images[0]} alt="image">
+    <div class="card-head">
+      <div class="card-rating button-text ">
+        <span>${this.componentProduct.rating}</span>
+        <a><i class="bi bi-star">&nbsp;</i></a>
       </div>
+      <div class="price">${this.componentProduct.price}</div>
+    </div>
+    <div class="card-body">
+      <span class="card-text">${this.componentProduct.title}</span>
+      <p class="article">${this.componentProduct.category}</p>
+    </div>
+    <button class="button button-text">Add To Cart</button>
+  </div>
     `;
   }
   myRender() {
@@ -46,5 +29,4 @@ export default class Card {
     this.element = div;
 
   }
-
 }
