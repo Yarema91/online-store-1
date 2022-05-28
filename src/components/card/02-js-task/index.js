@@ -1,7 +1,11 @@
 export default class Card {
-  constructor(product) {
-    this.componentProduct = product;
+  constructor(product, monitor) {
+    this.componentProduct = monitor;
+
     this.myRender();
+    this.update();
+    console.error(monitor);
+
 
   }
   getTemplate() {
@@ -23,10 +27,16 @@ export default class Card {
   </div>
     `;
   }
+
+
   myRender() {
     const div = document.createElement('div');
     div.innerHTML = this.getTemplate();
     this.element = div;
 
+  }
+
+  update() {
+    this.getTemplate()
   }
 }

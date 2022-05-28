@@ -6,6 +6,8 @@
   <title>Card component</title>
   <!-- <link rel="stylesheet" href="../../../styles/style.min.css"> -->
   <link rel="stylesheet" href="../01-css-task/style.css">
+  <link rel="stylesheet" href="../../pagination/01-css-task/style.css">
+
 
 
   <style>
@@ -22,6 +24,8 @@
 
   <script type="module">
     import Card from './index.js';
+    import Pagination from './pagination.js';
+
 
     const product = {
       "id": "76w0hz7015kkr9kjkav",
@@ -36,9 +40,27 @@
       "brand": "acer"
     };
 
-    const card = new Card(product);
+    const monitor = {
+      id: "w73oaydowenkr9kjkav",
+      images: [
+        "https://content1.rozetka.com.ua/goods/images/big_tile/178050370.jpg"
+      ],
+      title: "Монитор 23.8 BenQ GW2475H (9H.LFELA.TBE)",
+      rating: 5,
+      price: 3800,
+      category: "monitors",
+      brand: "benq"
+    };
+
+    const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    const card = new Card(product, monitor);
+    const pagination = new Pagination(pages);
+
 
     root.append(card.element);
+    root.append(pagination.element);
+
 
   </script>
 </body>

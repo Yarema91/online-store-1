@@ -1,3 +1,53 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-/* put your styles in this file */
+@import url(../card/style.css);
+
+div {
+  display: row;
+}
+
+.pagination {
+  width: 790px;
+  height: 205px;
+  left: 1960px;
+  top: 819px;
+
+  background: var(--white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 2147px;
+  top: 900px;
+  background: var(--grey);
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.page:hover,
+.active {
+  background: var(--fiolet);
+  color: var(--white);
+}
+
+.previous-page {
+  margin: 15px;
+  order: -1;
+}
+.next-page {
+  margin: 15px;
+  order: 2;
+}
