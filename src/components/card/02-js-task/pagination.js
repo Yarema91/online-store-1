@@ -9,7 +9,6 @@ export default class Pagination {
   }
 
 
-
   getTemplate() {
     return `
     <li class="page previous-page">
